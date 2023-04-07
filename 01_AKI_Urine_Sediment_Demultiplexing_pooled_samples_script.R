@@ -97,7 +97,7 @@ for (i in 1:length(PoolList)) {
 ## demultiplex using HTODemux function ----
 ## using low quantile because of noisy data in some cases
 
-Pool1neg <- MULTIseqDemux(PooList[[1]], quantile = 0.20) # HTODemux does not function in this case, MULTIseqDemux was applied. 
+Pool1neg <- MULTIseqDemux(PoolList[[1]], quantile = 0.20) # HTODemux does not function in this case, MULTIseqDemux was applied. 
 Pool1pos <- HTODemux(PoolList[[2]], positive.quantile = 0.95)
 Pool2neg <- HTODemux(PoolList[[3]], positive.quantile = 0.90)
 Pool2pos <- HTODemux(PoolList[[4]], positive.quantile = 0.99)
